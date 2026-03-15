@@ -1,0 +1,57 @@
+.board {
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  touch-action: none;
+  user-select: none;
+  will-change: transform;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.piece {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: white;
+  transition: transform 0.15s ease;
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.piece:active {
+  transform: scale(0.96);
+}
+
+.pieceImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.pieceNumber {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.empty {
+  background: rgba(0, 0, 0, 0.08);
+  cursor: default;
+  border-radius: 12px;
+}
+
+.sliding {
+  transition: transform 0.15s ease;
+}

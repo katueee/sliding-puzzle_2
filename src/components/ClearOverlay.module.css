@@ -1,0 +1,112 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: none;
+  pointer-events: none;
+  z-index: 200;
+}
+
+.burst {
+  position: absolute;
+  font-size: 24px;
+  animation: burstAnim 1s ease-out forwards;
+}
+
+@keyframes burstAnim {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.confetti {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.particle {
+  position: absolute;
+  font-size: 28px;
+  animation: particleFloat 3s ease-in-out forwards;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0) scale(0); opacity: 0; }
+  20% { transform: translateY(-20px) scale(1); opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: auto;
+  background: rgba(255, 250, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border-radius: 24px 24px 0 0;
+  padding: 28px 20px 36px;
+  text-align: center;
+  animation: slideUp 0.5s ease-out 0.3s both;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #ff55aa;
+  margin-bottom: 8px;
+}
+
+.stars {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.stats {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.retryButton {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff88cc, #ff55aa);
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 85, 170, 0.3);
+}
+
+.backButton {
+  padding: 14px 24px;
+  border: 2px solid #ddd;
+  border-radius: 16px;
+  background: white;
+  color: #666;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
